@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            const result = {
+                success: ["max-length", "no-amd", "prefer-arrow-functions"],
+                failure: ["no-var", "var-on-top", "linebreak"],
+                skipped: ["no-extra-semi", "no-dup-keys"]
+            };
+            function makeList(arr){
+                // Only change code below this line
+                const failureItems = [];
+                for(let i =0; i<arr.length; i++){
+                    failureItems.push(`<li class="text-warning">${result.failure[i]}</li>`)
+                }
+                // Only change code above this line
+
+                return failureItems;
+            }
+            const failuresList = makeList(result.failure);
+        </script>
+    </body>
+</html>
